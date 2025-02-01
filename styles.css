@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.timer-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#timer {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    margin: 1rem 0;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.reset-button {
+    background-color: #ff4444;
+}
+
+.reset-button:hover {
+    background-color: #cc0000;
+}
+
+.settings {
+    margin-bottom: 1rem;
+}
+
+.settings label {
+    margin-right: 0.5rem;
+}
+
+#minutes-input {
+    width: 60px;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#minutes-input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+} 

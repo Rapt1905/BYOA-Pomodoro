@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Pomodoro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timer-container">
+        <h1>Pomodoro Timer</h1>
+        <div class="settings">
+            <label for="minutes-input">Minutes:</label>
+            <input type="number" id="minutes-input" min="1" max="60" value="25">
+        </div>
+        <div id="timer">25:00</div>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="resetTimer()" class="reset-button">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
