@@ -46,4 +46,15 @@ document.getElementById('minutes-input').addEventListener('change', function() {
         updateDisplay();
     }
 });
-updateDisplay(); 
+updateDisplay();
+
+function updateTimer() {
+    if (timeLeft > 0) {
+        // ... existing timer update code ...
+    } else {
+        clearInterval(timerInterval);
+        const audio = document.getElementById('timerComplete');
+        audio.play();
+        // ... rest of completion code ...
+    }
+} 
