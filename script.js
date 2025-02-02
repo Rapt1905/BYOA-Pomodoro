@@ -10,7 +10,6 @@ function updateDisplay() {
 
 function startTimer() {
     if (timerId === null) {
-        // Disable the minutes input while timer is running
         document.getElementById('minutes-input').disabled = true;
         timerId = setInterval(() => {
             timeLeft--;
@@ -18,6 +17,8 @@ function startTimer() {
             if (timeLeft === 0) {
                 clearInterval(timerId);
                 timerId = null;
+                const audio = document.getElementById('timerComplete');
+                audio.play();
                 alert('Time is up!');
                 resetTimer();
             }
@@ -25,7 +26,6 @@ function startTimer() {
     } else {
         clearInterval(timerId);
         timerId = null;
-        // Enable the minutes input when timer is stopped
         document.getElementById('minutes-input').disabled = false;
     }
 }
@@ -57,4 +57,7 @@ function updateTimer() {
         audio.play();
         // ... rest of completion code ...
     }
-} 
+}
+
+// Add this at the bottom of your script
+document.getElementById('timerComplete').load(); 
